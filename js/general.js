@@ -1,14 +1,19 @@
 
 $(document).ready(function() {
-	$(window).resize(); 
-	$('nav a').click(function(event) {
+	$(window).resize();
+	$('nav a').click(function() {
 		event.preventDefault();
+		$('body').css('transition', '0.25s ease');
+		$('body').css('position', 'relative');
+		$('body').css('left', '100%');
+		$('nav').css('width', '200%')
+		$('nav').css('margin-left', '-100%')
+		$('nav a#current').attr('id', '');
 		var href = $(this).attr('href');
-		$('nav').slideUp();
 		setTimeout(function() {
 			window.location = href;
-		}, 500);
-	})
+		}, 750);
+	});
 });
 
 $(window).resize(function() {
