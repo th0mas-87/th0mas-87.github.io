@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 	$(window).resize();
+	$('div#main').fadeIn('slow');
 	$('nav a').click(function() {
 		event.preventDefault();
 		$('body').css('transition', '0.25s ease');
